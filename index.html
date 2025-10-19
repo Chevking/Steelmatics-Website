@@ -39,6 +39,17 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo-text {
             font-size: 1.5rem;
             font-weight: bold;
             color: #ff6b35;
@@ -64,7 +75,8 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(26, 35, 50, 0.7), rgba(26, 35, 50, 0.7)), 
-                        url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1600&q=80');
+                        /* UPDATED Hero Image Path */
+                        url('Hero/grinding3.jpg');
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -245,26 +257,32 @@
             position: relative;
             z-index: 1;
         }
-
+        
+        /* UPDATED Project Image Sources */
         #project1 {
-            background-image: url('https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80');
+            background-image: url('Projects/Projects1.jpg');
         }
 
         #project2 {
-            background-image: url('https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=800&q=80');
+            background-image: url('Projects/Projects6.jpg');
         }
 
         #project3 {
-            background-image: url('https://images.unsplash.com/photo-1513828583688-c52646db42da?w=800&q=80');
+            background-image: url('Projects/Projects4.jpg');
         }
 
         #project4 {
-            background-image: url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80');
+            background-image: url('Projects/Projects30.png');
         }
 
         #project5 {
-            background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80');
+            background-image: url('Projects/Projects33.png');
         }
+        
+        #project6 {
+            background-image: url('Projects/Projects34.png');
+        }
+
 
         .project-info {
             padding: 1.5rem;
@@ -364,7 +382,10 @@
 <body>
     <header>
         <nav>
-            <div class="logo">STEELMATICS</div>
+            <div class="logo">
+                <img src="SCIL Blue Logo.jpg" alt="Steelmatics Logo">
+                <span class="logo-text">STEELMATICS</span>
+            </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
