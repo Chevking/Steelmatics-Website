@@ -75,8 +75,8 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(26, 35, 50, 0.7), rgba(26, 35, 50, 0.7)), 
-                        /* CORRECTED: Uses 'Hero' folder and 'Grinding3.jpg' file */
-                        url('Hero/Grinding3.jpg');
+                        /* **LOWERCASE PATH:** 'hero/grinding3.jpg' */
+                        url('hero/grinding3.jpg'); 
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -213,6 +213,10 @@
         }
 
         /* Projects Section */
+        #projects {
+            background: #f8f9fa;
+        }
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -220,7 +224,7 @@
         }
 
         .project-card {
-            background: #f8f9fa;
+            background: white;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -258,29 +262,29 @@
             z-index: 1;
         }
         
-        /* CORRECTED Project Image Sources: Uses 'projects' (lowercase) folder */
+        /* **LOWERCASE PATH:** 'projects/projectsX.jpg' */
         #project1 {
-            background-image: url('projects/Projects1.jpg');
+            background-image: url('projects/projects1.jpg');
         }
 
         #project2 {
-            background-image: url('projects/Projects6.jpg');
+            background-image: url('projects/projects6.jpg');
         }
 
         #project3 {
-            background-image: url('projects/Projects4.jpg');
+            background-image: url('projects/projects4.jpg');
         }
 
         #project4 {
-            background-image: url('projects/Projects30.png');
+            background-image: url('projects/projects30.png');
         }
 
         #project5 {
-            background-image: url('projects/Projects33.png');
+            background-image: url('projects/projects33.png');
         }
         
         #project6 {
-            background-image: url('projects/Projects34.png');
+            background-image: url('projects/projects34.png');
         }
 
 
@@ -383,7 +387,7 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="Images/SCIL Blue Logo.jpg" alt="Steelmatics Logo">
+                <img src="images/scil-blue-logo.jpg" alt="Steelmatics Logo">
                 <span class="logo-text">STEELMATICS</span>
             </div>
             <ul class="nav-links">
