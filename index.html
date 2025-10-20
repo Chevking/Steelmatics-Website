@@ -75,9 +75,8 @@
 
         /* Hero Section */
         .hero {
-            /* PATH FIX: Changed to lowercase: hero/grinding3.jpg */
             background: linear-gradient(rgba(26, 35, 50, 0.6), rgba(26, 35, 50, 0.6)), 
-                        url('images/hero/grinding3.jpg');
+                        url('images/Hero/Grinding3.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -297,14 +296,17 @@
             box-shadow: 0 12px 30px rgba(0,0,0,0.15);
         }
 
-        /* service-icon CSS removed as icons are removed from HTML */
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
 
         .service-card h3 {
             color: #1a2332;
             margin-bottom: 1rem;
         }
 
-        /* Individual Service Card Backgrounds (Fixed path for Engineering/Detailing) */
+        /* Individual Service Card Backgrounds */
         .service-card:nth-child(1) {
             background-image: url('images/Services/fab%20items.jpg');
         }
@@ -318,8 +320,7 @@
         }
 
         .service-card:nth-child(4) {
-            /* PATH FIX: Changed to lowercase: detailing/detailing1.jpg */
-            background-image: url('images/detailing/detailing1.jpg');
+            background-image: url('images/Detailing/Detailing.jpg');
         }
 
         .service-card:nth-child(5) {
@@ -362,13 +363,9 @@
             align-items: center;
             justify-content: center;
             color: white;
-            /* Changed font-size from 3rem to 1.8rem for better title display */
-            font-size: 1.8rem; 
-            font-weight: bold;
-            text-align: center;
+            font-size: 3rem;
             position: relative;
             transition: all 0.3s;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
         }
 
         .project-image::before {
@@ -378,19 +375,17 @@
             left: 0;
             right: 0;
             bottom: 0;
-            /* OPACITY ADJUSTED: Lighter gradient overlay for better image visibility */
-            background: linear-gradient(135deg, rgba(26, 35, 50, 0.3) 0%, rgba(102, 126, 234, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(26, 35, 50, 0.5) 0%, rgba(102, 126, 234, 0.3) 100%);
             transition: all 0.3s;
         }
 
         .project-card:hover .project-image::before {
-            background: linear-gradient(135deg, rgba(26, 35, 50, 0.1) 0%, rgba(102, 126, 234, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(26, 35, 50, 0.3) 0%, rgba(102, 126, 234, 0.2) 100%);
         }
 
         .project-image span {
             position: relative;
             z-index: 1;
-            padding: 0 1rem;
         }
         
         #project1 {
@@ -406,18 +401,15 @@
         }
 
         #project4 {
-            /* PATH FIX: Changed to lowercase: projects/projects1.jpg */
-            background-image: url('images/projects/projects1.jpg');
+            background-image: url('images/projects/Projects30.png');
         }
 
         #project5 {
-            /* PATH FIX: Changed to lowercase: detailing/detailing5.png */
-            background-image: url('images/detailing/detailing5.png');
+            background-image: url('images/Detailing/detailing1.jpg');
         }
         
         #project6 {
-            /* PATH FIX: Changed to lowercase: projects/projects34.png */
-            background-image: url('images/projects/projects34.png');
+            background-image: url('images/projects/Projects33.png');
         }
 
         .project-info {
@@ -603,26 +595,32 @@
         <h2 class="section-title">Our Services</h2>
         <div class="services-grid">
             <div class="service-card">
+                <div class="service-icon">🏗️</div>
                 <h3>Metal Fabrication</h3>
                 <p>Expert fabrication services for all types of steel structures and components with precision and quality.</p>
             </div>
             <div class="service-card">
+                <div class="service-icon">🔩</div>
                 <h3>Structural Steel Supply/Sales</h3>
                 <p>High-quality structural steel supply and sales for construction projects, buildings, and infrastructure development.</p>
             </div>
             <div class="service-card">
+                <div class="service-icon">⚙️</div>
                 <h3>Custom MetalWorks</h3>
                 <p>Customized metal fabrication solutions designed to meet your specific project requirements and specifications.</p>
             </div>
             <div class="service-card">
+                <div class="service-icon">📐</div>
                 <h3>Engineering/Detailing</h3>
                 <p>Professional engineering and detailed technical drawings for structural steel projects ensuring precision and compliance.</p>
             </div>
             <div class="service-card">
+                <div class="service-icon">🏢</div>
                 <h3>Civil Works (Concrete Construction Services)</h3>
                 <p>Comprehensive civil works including concrete construction services for foundations, structures, and infrastructure projects.</p>
             </div>
             <div class="service-card">
+                <div class="service-icon">🔥</div>
                 <h3>Welding Services</h3>
                 <p>Professional welding services using modern techniques and equipment for durable and reliable results.</p>
             </div>
@@ -633,42 +631,42 @@
         <h2 class="section-title">Our Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <div class="project-image" id="project1"><span>Commercial Buildings</span></div>
+                <div class="project-image" id="project1"><span>🏢</span></div>
                 <div class="project-info">
                     <h3>Commercial Buildings</h3>
                     <p>Structural steel fabrication and installation for modern commercial complexes and office buildings.</p>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image" id="project2"><span>Infrastructure Projects</span></div>
+                <div class="project-image" id="project2"><span>🌉</span></div>
                 <div class="project-info">
                     <h3>Infrastructure Projects</h3>
                     <p>Large-scale infrastructure development including bridges, warehouses, and industrial facilities.</p>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image" id="project3"><span>Industrial Facilities</span></div>
+                <div class="project-image" id="project3"><span>🏭</span></div>
                 <div class="project-info">
                     <h3>Industrial Facilities</h3>
                     <p>Custom steel structures for manufacturing plants, factories, and industrial processing facilities.</p>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image" id="project4"><span>Residential Projects</span></div>
+                <div class="project-image" id="project4"><span>🏗️</span></div>
                 <div class="project-info">
                     <h3>Residential Projects</h3>
                     <p>Residential steel structures including gates, railings, and structural support systems.</p>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image" id="project5"><span>Structural Detailing and Modelling</span></div>
+                <div class="project-image" id="project5"><span>📐</span></div>
                 <div class="project-info">
                     <h3>Structural Detailing and Modelling</h3>
                     <p>Advanced 3D structural modeling and detailed shop drawings for precise fabrication and installation.</p>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image" id="project6"><span>Erection Services</span></div>
+                <div class="project-image" id="project6"><span>🏗️</span></div>
                 <div class="project-info">
                     <h3>Erection Services</h3>
                     <p>Professional steel structure erection and installation services ensuring safe and precise assembly on-site.</p>
