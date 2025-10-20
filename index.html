@@ -75,7 +75,8 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(26, 35, 50, 0.6), rgba(26, 35, 50, 0.6)), 
+            /* OPACITY ADJUSTED: Changed from 0.6 to 0.4 for better image visibility */
+            background: linear-gradient(rgba(26, 35, 50, 0.4), rgba(26, 35, 50, 0.4)), 
                         url('images/Hero/Grinding3.jpg');
             background-size: cover;
             background-position: center;
@@ -90,14 +91,9 @@
             position: relative;
         }
 
+        /* Removed redundant .hero::before radial gradient for a cleaner look */
         .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at center, transparent 0%, rgba(26, 35, 50, 0.4) 100%);
+            content: none; 
         }
 
         .hero-content {
@@ -261,13 +257,15 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(255, 255, 255, 0.92);
+            /* OPACITY ADJUSTED: Reduced white overlay from 0.92 to 0.7 */
+            background: rgba(255, 255, 255, 0.7);
             z-index: 0;
             transition: all 0.3s;
         }
 
         .service-card:hover::after {
-            background: rgba(255, 255, 255, 0.85);
+            /* OPACITY ADJUSTED: Reduced hover white overlay from 0.85 to 0.6 */
+            background: rgba(255, 255, 255, 0.6);
         }
 
         .service-card > * {
@@ -296,17 +294,14 @@
             box-shadow: 0 12px 30px rgba(0,0,0,0.15);
         }
 
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
+        /* service-icon CSS removed as icons are removed from HTML */
 
         .service-card h3 {
             color: #1a2332;
             margin-bottom: 1rem;
         }
 
-        /* Individual Service Card Backgrounds */
+        /* Individual Service Card Backgrounds (Paths confirmed as working) */
         .service-card:nth-child(1) {
             background-image: url('images/Services/fab%20items.jpg');
         }
@@ -320,6 +315,7 @@
         }
 
         .service-card:nth-child(4) {
+             /* Engineering/Detailing path confirmed */
             background-image: url('images/Detailing/detailing1.jpg');
         }
 
@@ -363,7 +359,10 @@
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 3rem;
+            /* Font size for the text title over the image */
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-align: center;
             position: relative;
             transition: all 0.3s;
         }
@@ -375,19 +374,24 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(26, 35, 50, 0.5) 0%, rgba(102, 126, 234, 0.3) 100%);
+            /* OPACITY ADJUSTED: Lighter gradient overlay for better image visibility */
+            background: linear-gradient(135deg, rgba(26, 35, 50, 0.3) 0%, rgba(102, 126, 234, 0.1) 100%);
             transition: all 0.3s;
         }
 
         .project-card:hover .project-image::before {
-            background: linear-gradient(135deg, rgba(26, 35, 50, 0.3) 0%, rgba(102, 126, 234, 0.2) 100%);
+            /* OPACITY ADJUSTED: Even lighter on hover */
+            background: linear-gradient(135deg, rgba(26, 35, 50, 0.1) 0%, rgba(102, 126, 234, 0.05) 100%);
         }
 
         .project-image span {
             position: relative;
             z-index: 1;
+            padding: 0 1rem;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
         }
         
+        /* All Project Image Paths Confirmed as working */
         #project1 {
             background-image: url('images/projects/Projects5.jpg');
         }
@@ -401,14 +405,17 @@
         }
 
         #project4 {
+            /* Residential Projects path confirmed */
             background-image: url('images/projects/Projects1.jpg');
         }
 
         #project5 {
+            /* Structural Detailing and Modelling path confirmed */
             background-image: url('images/Detailing/detailing5.png');
         }
         
         #project6 {
+            /* Erection Services path confirmed */
             background-image: url('images/projects/Projects34.png');
         }
 
@@ -595,32 +602,26 @@
         <h2 class="section-title">Our Services</h2>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon">🏗️</div>
                 <h3>Metal Fabrication</h3>
                 <p>Expert fabrication services for all types of steel structures and components with precision and quality.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🔩</div>
                 <h3>Structural Steel Supply/Sales</h3>
                 <p>High-quality structural steel supply and sales for construction projects, buildings, and infrastructure development.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">⚙️</div>
                 <h3>Custom MetalWorks</h3>
                 <p>Customized metal fabrication solutions designed to meet your specific project requirements and specifications.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">📐</div>
                 <h3>Engineering/Detailing</h3>
                 <p>Professional engineering and detailed technical drawings for structural steel projects ensuring precision and compliance.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🏢</div>
                 <h3>Civil Works (Concrete Construction Services)</h3>
                 <p>Comprehensive civil works including concrete construction services for foundations, structures, and infrastructure projects.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🔥</div>
                 <h3>Welding Services</h3>
                 <p>Professional welding services using modern techniques and equipment for durable and reliable results.</p>
             </div>
@@ -631,42 +632,42 @@
         <h2 class="section-title">Our Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <div class="project-image" id="project1"><span>🏢</span></div>
+                <div class="project-image" id="project1"><span>Commercial Buildings</span></div>
                 <div class="project-info">
                     <h3>Commercial Buildings</h3>
                     <p>Structural steel fabrication and installation for modern commercial complexes and office buildings.</p>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image" id="project2"><span>🌉</span></div>
+                <div class="project-image" id="project2"><span>Infrastructure Projects</span></div>
                 <div class="project-info">
                     <h3>Infrastructure Projects</h3>
                     <p>Large-scale infrastructure development including bridges, warehouses, and industrial facilities.</p>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image" id="project3"><span>🏭</span></div>
+                <div class="project-image" id="project3"><span>Industrial Facilities</span></div>
                 <div class="project-info">
                     <h3>Industrial Facilities</h3>
                     <p>Custom steel structures for manufacturing plants, factories, and industrial processing facilities.</p>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image" id="project4"><span>🏗️</span></div>
+                <div class="project-image" id="project4"><span>Residential Projects</span></div>
                 <div class="project-info">
                     <h3>Residential Projects</h3>
                     <p>Residential steel structures including gates, railings, and structural support systems.</p>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image" id="project5"><span>📐</span></div>
+                <div class="project-image" id="project5"><span>Structural Detailing and Modelling</span></div>
                 <div class="project-info">
                     <h3>Structural Detailing and Modelling</h3>
                     <p>Advanced 3D structural modeling and detailed shop drawings for precise fabrication and installation.</p>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image" id="project6"><span>🏗️</span></div>
+                <div class="project-image" id="project6"><span>Erection Services</span></div>
                 <div class="project-info">
                     <h3>Erection Services</h3>
                     <p>Professional steel structure erection and installation services ensuring safe and precise assembly on-site.</p>
