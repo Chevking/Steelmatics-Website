@@ -239,93 +239,88 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
         }
 
         .service-card {
             background: white;
-            padding: 2rem;
             border-radius: 10px;
+            overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             transition: all 0.3s;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            background-size: cover;
-            background-position: center;
         }
 
-        .service-card::after {
+        .service-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+        }
+
+        .service-image {
+            height: 280px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .service-image::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(255, 255, 255, 0.45);
-            z-index: 0;
+            background: linear-gradient(135deg, rgba(26, 35, 50, 0.3) 0%, rgba(102, 126, 234, 0.2) 100%);
             transition: all 0.3s;
         }
 
-        .service-card > * {
+        .service-card:hover .service-image::before {
+            background: linear-gradient(135deg, rgba(26, 35, 50, 0.2) 0%, rgba(102, 126, 234, 0.1) 100%);
+        }
+
+        .service-image span {
             position: relative;
             z-index: 1;
         }
 
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(90deg, #ff6b35 0%, #ff8c5a 100%);
-            transform: scaleX(0);
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-card:hover::after {
-            background: rgba(255, 255, 255, 0.35);
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-        }
-
-        .service-card h3 {
-            color: #1a2332;
-            margin-bottom: 1rem;
-        }
-
-        /* Individual Service Card Backgrounds */
-        .service-card:nth-child(1) {
+        #service1 {
             background-image: url('images/Services/fab\ items.jpg');
         }
 
-        .service-card:nth-child(2) {
+        #service2 {
             background-image: url('images/Sales/beam1.jpg');
         }
 
-        .service-card:nth-child(3) {
+        #service3 {
             background-image: url('images/Services/welding1.jpg');
         }
 
-        .service-card:nth-child(4) {
+        #service4 {
             background-image: url('images/Detailing/detailing1.jpg');
         }
 
-        .service-card:nth-child(5) {
+        #service5 {
             background-image: url('images/Services/cutting.jpg');
         }
 
-        .service-card:nth-child(6) {
+        #service6 {
             background-image: url('images/Services/welding5.jpg');
+        }
+
+        .service-info {
+            padding: 1.5rem;
+            background: white;
+        }
+
+        .service-info h3 {
+            color: #1a2332;
+            margin-bottom: 0.5rem;
         }
 
         /* Projects Section */
@@ -406,7 +401,7 @@
         }
         
         #project6 {
-            background-image: url('images/Detailing/detail34.bmp');
+            background-image: url('images/Detailing/detail33.jpg');
         }
 
         .project-info {
@@ -520,7 +515,8 @@
                 grid-template-columns: 1fr;
             }
 
-            .projects-grid {
+            .projects-grid,
+            .services-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -592,28 +588,46 @@
         <h2 class="section-title">Our Services</h2>
         <div class="services-grid">
             <div class="service-card">
-                <h3>Metal Fabrication</h3>
-                <p>Expert fabrication services for all types of steel structures and components with precision and quality.</p>
+                <div class="service-image" id="service1"></div>
+                <div class="service-info">
+                    <h3>Metal Fabrication</h3>
+                    <p>Expert fabrication services for all types of steel structures and components with precision and quality.</p>
+                </div>
             </div>
             <div class="service-card">
-                <h3>Structural Steel Supply/Sales</h3>
-                <p>High-quality structural steel supply and sales for construction projects, buildings, and infrastructure development.</p>
+                <div class="service-image" id="service2"></div>
+                <div class="service-info">
+                    <h3>Structural Steel Supply/Sales</h3>
+                    <p>High-quality structural steel supply and sales for construction projects, buildings, and infrastructure development.</p>
+                </div>
             </div>
             <div class="service-card">
-                <h3>Custom MetalWorks</h3>
-                <p>Customized metal fabrication solutions designed to meet your specific project requirements and specifications.</p>
+                <div class="service-image" id="service3"></div>
+                <div class="service-info">
+                    <h3>Custom MetalWorks</h3>
+                    <p>Customized metal fabrication solutions designed to meet your specific project requirements and specifications.</p>
+                </div>
             </div>
             <div class="service-card">
-                <h3>Engineering/Detailing</h3>
-                <p>Professional engineering and detailed technical drawings for structural steel projects ensuring precision and compliance.</p>
+                <div class="service-image" id="service4"></div>
+                <div class="service-info">
+                    <h3>Engineering/Detailing</h3>
+                    <p>Professional engineering and detailed technical drawings for structural steel projects ensuring precision and compliance.</p>
+                </div>
             </div>
             <div class="service-card">
-                <h3>Civil Works (Concrete Construction Services)</h3>
-                <p>Comprehensive civil works including concrete construction services for foundations, structures, and infrastructure projects.</p>
+                <div class="service-image" id="service5"></div>
+                <div class="service-info">
+                    <h3>Civil Works (Concrete Construction Services)</h3>
+                    <p>Comprehensive civil works including concrete construction services for foundations, structures, and infrastructure projects.</p>
+                </div>
             </div>
             <div class="service-card">
-                <h3>Welding Services</h3>
-                <p>Professional welding services using modern techniques and equipment for durable and reliable results.</p>
+                <div class="service-image" id="service6"></div>
+                <div class="service-info">
+                    <h3>Welding Services</h3>
+                    <p>Professional welding services using modern techniques and equipment for durable and reliable results.</p>
+                </div>
             </div>
         </div>
     </section>
