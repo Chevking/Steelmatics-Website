@@ -75,9 +75,8 @@
 
         /* Hero Section */
         .hero {
-            /* FIX: Changed path to lowercase for Netlify/Linux compatibility */
             background: linear-gradient(rgba(26, 35, 50, 0.6), rgba(26, 35, 50, 0.6)), 
-                        url('images/hero/grinding3.jpg');
+                        url('images/Hero/grinding3.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -153,6 +152,8 @@
             transition: all 0.3s;
             box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
             animation: fadeInUp 1s ease 0.6s both;
+            border: none;
+            cursor: pointer;
         }
 
         .btn:hover {
@@ -267,10 +268,6 @@
             transition: all 0.3s;
         }
 
-        .service-card:hover::after {
-            background: rgba(255, 255, 255, 0.85);
-        }
-
         .service-card > * {
             position: relative;
             z-index: 1;
@@ -304,7 +301,7 @@
 
         /* Individual Service Card Backgrounds */
         .service-card:nth-child(1) {
-            background-image: url('images/Services/fab%20items.jpg');
+            background-image: url('images/Services/fab\ items.jpg');
         }
 
         .service-card:nth-child(2) {
@@ -316,13 +313,11 @@
         }
 
         .service-card:nth-child(4) {
-            /* FIX: Removing background image for Engineering/Detailing */
-            background-image: none;
-            background-color: #f8f8f8; /* Ensures visibility when image is removed */
+            background-image: url('images/Detailing/Detailing.jpg');
         }
 
         .service-card:nth-child(5) {
-            background-image: url('images/projects/Projects2.jpg');
+            background-image: url('images/Services/cutting.jpg');
         }
 
         .service-card:nth-child(6) {
@@ -361,13 +356,9 @@
             align-items: center;
             justify-content: center;
             color: white;
-            /* Changed font-size from 3rem (for emoji) to 1.8rem (for text title) */
-            font-size: 1.8rem; 
-            font-weight: bold;
-            text-align: center;
+            font-size: 3rem;
             position: relative;
             transition: all 0.3s;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
         }
 
         .project-image::before {
@@ -377,43 +368,17 @@
             left: 0;
             right: 0;
             bottom: 0;
-            /* Lighter gradient overlay for better image visibility */
-            background: linear-gradient(135deg, rgba(26, 35, 50, 0.3) 0%, rgba(102, 126, 234, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(26, 35, 50, 0.5) 0%, rgba(102, 126, 234, 0.3) 100%);
             transition: all 0.3s;
         }
 
-        /* Remove the text shadow from projects without an image */
-        #project5 {
-            background-color: #f0f0f0; 
-            color: #1a2332;
-            text-shadow: none;
-        }
-
-        /* FIX: Removing background image for Structural Detailing and Modelling */
-        #project5 {
-            background-image: none;
-        }
-        
-        /* Remove the dark overlay from the project with no image */
-        #project5::before {
-            content: none;
-        }
-
-        /* Ensure the text is dark and visible on the light background for project 5 */
-        #project5 span {
-            color: #1a2332;
-            text-shadow: none;
-        }
-
-
         .project-card:hover .project-image::before {
-            background: linear-gradient(135deg, rgba(26, 35, 50, 0.1) 0%, rgba(102, 126, 234, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(26, 35, 50, 0.3) 0%, rgba(102, 126, 234, 0.2) 100%);
         }
 
         .project-image span {
             position: relative;
             z-index: 1;
-            padding: 0 1rem;
         }
         
         #project1 {
@@ -429,15 +394,15 @@
         }
 
         #project4 {
-            /* Kept original path but ensure text is displayed instead of emoji */
-            background-image: url('images/projects/Projects30.png'); 
+            background-image: url('images/projects/Projects1.jpg');
         }
 
-        /* #project5 image is removed above */
+        #project5 {
+            background-image: url('images/Detailing/detailing1.jpg');
+        }
         
         #project6 {
-            /* Kept original path but ensure text is displayed instead of emoji */
-            background-image: url('images/projects/Projects33.png');
+            background-image: url('images/Detailing/detailing5.png');
         }
 
         .project-info {
@@ -514,7 +479,6 @@
         }
 
         .contact-item-icon {
-            /* Icons in contact section are retained as requested */
             font-size: 1.5rem;
             color: #ff6b35;
         }
@@ -654,42 +618,42 @@
         <h2 class="section-title">Our Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <div class="project-image" id="project1"><span>Commercial Buildings</span></div>
+                <div class="project-image" id="project1"></div>
                 <div class="project-info">
                     <h3>Commercial Buildings</h3>
                     <p>Structural steel fabrication and installation for modern commercial complexes and office buildings.</p>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image" id="project2"><span>Infrastructure Projects</span></div>
+                <div class="project-image" id="project2"></div>
                 <div class="project-info">
                     <h3>Infrastructure Projects</h3>
                     <p>Large-scale infrastructure development including bridges, warehouses, and industrial facilities.</p>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image" id="project3"><span>Industrial Facilities</span></div>
+                <div class="project-image" id="project3"></div>
                 <div class="project-info">
                     <h3>Industrial Facilities</h3>
                     <p>Custom steel structures for manufacturing plants, factories, and industrial processing facilities.</p>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image" id="project4"><span>Residential Projects</span></div>
+                <div class="project-image" id="project4"></div>
                 <div class="project-info">
                     <h3>Residential Projects</h3>
                     <p>Residential steel structures including gates, railings, and structural support systems.</p>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image" id="project5"><span>Structural Detailing and Modelling</span></div>
+                <div class="project-image" id="project5"></div>
                 <div class="project-info">
                     <h3>Structural Detailing and Modelling</h3>
                     <p>Advanced 3D structural modeling and detailed shop drawings for precise fabrication and installation.</p>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image" id="project6"><span>Erection Services</span></div>
+                <div class="project-image" id="project6"></div>
                 <div class="project-info">
                     <h3>Erection Services</h3>
                     <p>Professional steel structure erection and installation services ensuring safe and precise assembly on-site.</p>
