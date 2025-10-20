@@ -76,7 +76,7 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(26, 35, 50, 0.6), rgba(26, 35, 50, 0.6)), 
-                        url('images/hero/grinding3.jpg');
+                        url('images/Hero/Grinding3.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -250,6 +250,29 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.92);
+            z-index: 0;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover::after {
+            background: rgba(255, 255, 255, 0.85);
+        }
+
+        .service-card > * {
+            position: relative;
+            z-index: 1;
         }
 
         .service-card::before {
@@ -281,6 +304,31 @@
         .service-card h3 {
             color: #1a2332;
             margin-bottom: 1rem;
+        }
+
+        /* Individual Service Card Backgrounds */
+        .service-card:nth-child(1) {
+            background-image: url('images/Services/fab%20items.jpg');
+        }
+
+        .service-card:nth-child(2) {
+            background-image: url('images/Sales/beam1.jpg');
+        }
+
+        .service-card:nth-child(3) {
+            background-image: url('images/Services/welding1.jpg');
+        }
+
+        .service-card:nth-child(4) {
+            background-image: url('images/Detailing/detailing1.jpg');
+        }
+
+        .service-card:nth-child(5) {
+            background-image: url('images/projects/Projects2.jpg');
+        }
+
+        .service-card:nth-child(6) {
+            background-image: url('images/Services/welding5.jpg');
         }
 
         /* Projects Section */
@@ -341,27 +389,27 @@
         }
         
         #project1 {
-            background-image: url('images/projects/projects1.jpg');
+            background-image: url('images/projects/Projects5.jpg');
         }
 
         #project2 {
-            background-image: url('images/projects/projects6.jpg');
+            background-image: url('images/projects/Projects6.jpg');
         }
 
         #project3 {
-            background-image: url('images/projects/projects4.jpg');
+            background-image: url('images/projects/Projects4.jpg');
         }
 
         #project4 {
-            background-image: url('images/projects/projects30.png');
+            background-image: url('images/projects/Projects1.jpg');
         }
 
         #project5 {
-            background-image: url('images/projects/projects33.png');
+            background-image: url('images/Detailing/detailing5.png');
         }
         
         #project6 {
-            background-image: url('images/projects/projects34.png');
+            background-image: url('images/projects/Projects34.png');
         }
 
         .project-info {
@@ -485,7 +533,7 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="images/scil-blue-logo.jpg" alt="Steelmatics Logo">
+                <img src="images/Steel%20Matics%20Logo%20Coloured.png" alt="Steelmatics Logo">
                 <span class="logo-text">STEELMATICS</span>
             </div>
             <ul class="nav-links">
@@ -656,14 +704,14 @@
                     <div class="contact-item-icon">📍</div>
                     <div>
                         <h3>Lagos Office</h3>
-                        <p>  Towolawi Ave, off Ogungbesan Street,<br>Coker off Oshodi Apapa Express,<br>Lagos, Nigeria</p>
+                        <p>15 Towolawi Ave, off Ogungbesan Street,<br>Coker off Oshodi Apapa Express,<br>Lagos, Nigeria</p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <div class="contact-item-icon">📍</div>
                     <div>
                         <h3>Ibadan Office</h3>
-                        <p>  Fagbo Close, off Olubadan Avenue,<br>Oluyole Estate,<br>Ibadan, Oyo State</p>
+                        <p>8 Fagbo Close, off Olubadan Avenue,<br>Oluyole Estate,<br>Ibadan, Oyo State</p>
                     </div>
                 </div>
             </div>
