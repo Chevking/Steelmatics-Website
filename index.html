@@ -75,9 +75,9 @@
 
         /* Hero Section */
         .hero {
-            /* OPACITY ADJUSTED: Changed from 0.6 to 0.4 for better image visibility */
-            background: linear-gradient(rgba(26, 35, 50, 0.4), rgba(26, 35, 50, 0.4)), 
-                        url('images/Hero/Grinding3.jpg');
+            /* PATH FIX: Changed to lowercase: hero/grinding3.jpg */
+            background: linear-gradient(rgba(26, 35, 50, 0.6), rgba(26, 35, 50, 0.6)), 
+                        url('images/hero/grinding3.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -91,9 +91,14 @@
             position: relative;
         }
 
-        /* Removed redundant .hero::before radial gradient for a cleaner look */
         .hero::before {
-            content: none; 
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(26, 35, 50, 0.4) 100%);
         }
 
         .hero-content {
@@ -257,15 +262,13 @@
             left: 0;
             right: 0;
             bottom: 0;
-            /* OPACITY ADJUSTED: Reduced white overlay from 0.92 to 0.7 */
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.92);
             z-index: 0;
             transition: all 0.3s;
         }
 
         .service-card:hover::after {
-            /* OPACITY ADJUSTED: Reduced hover white overlay from 0.85 to 0.6 */
-            background: rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.85);
         }
 
         .service-card > * {
@@ -301,7 +304,7 @@
             margin-bottom: 1rem;
         }
 
-        /* Individual Service Card Backgrounds (Paths confirmed as working) */
+        /* Individual Service Card Backgrounds (Fixed path for Engineering/Detailing) */
         .service-card:nth-child(1) {
             background-image: url('images/Services/fab%20items.jpg');
         }
@@ -315,8 +318,8 @@
         }
 
         .service-card:nth-child(4) {
-             /* Engineering/Detailing path confirmed */
-            background-image: url('images/Detailing/detailing1.jpg');
+            /* PATH FIX: Changed to lowercase: detailing/detailing1.jpg */
+            background-image: url('images/detailing/detailing1.jpg');
         }
 
         .service-card:nth-child(5) {
@@ -359,12 +362,13 @@
             align-items: center;
             justify-content: center;
             color: white;
-            /* Font size for the text title over the image */
-            font-size: 1.8rem;
+            /* Changed font-size from 3rem to 1.8rem for better title display */
+            font-size: 1.8rem; 
             font-weight: bold;
             text-align: center;
             position: relative;
             transition: all 0.3s;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
         }
 
         .project-image::before {
@@ -380,7 +384,6 @@
         }
 
         .project-card:hover .project-image::before {
-            /* OPACITY ADJUSTED: Even lighter on hover */
             background: linear-gradient(135deg, rgba(26, 35, 50, 0.1) 0%, rgba(102, 126, 234, 0.05) 100%);
         }
 
@@ -388,10 +391,8 @@
             position: relative;
             z-index: 1;
             padding: 0 1rem;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
         }
         
-        /* All Project Image Paths Confirmed as working */
         #project1 {
             background-image: url('images/projects/Projects5.jpg');
         }
@@ -405,18 +406,18 @@
         }
 
         #project4 {
-            /* Residential Projects path confirmed */
-            background-image: url('images/projects/Projects1.jpg');
+            /* PATH FIX: Changed to lowercase: projects/projects1.jpg */
+            background-image: url('images/projects/projects1.jpg');
         }
 
         #project5 {
-            /* Structural Detailing and Modelling path confirmed */
-            background-image: url('images/Detailing/detailing5.png');
+            /* PATH FIX: Changed to lowercase: detailing/detailing5.png */
+            background-image: url('images/detailing/detailing5.png');
         }
         
         #project6 {
-            /* Erection Services path confirmed */
-            background-image: url('images/projects/Projects34.png');
+            /* PATH FIX: Changed to lowercase: projects/projects34.png */
+            background-image: url('images/projects/projects34.png');
         }
 
         .project-info {
