@@ -76,7 +76,7 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(26, 35, 50, 0.6), rgba(26, 35, 50, 0.6)), 
-                        url('images/Hero/grinding3.jpg');
+                        url('images/Hero/Grinding3.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -152,8 +152,6 @@
             transition: all 0.3s;
             box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
             animation: fadeInUp 1s ease 0.6s both;
-            border: none;
-            cursor: pointer;
         }
 
         .btn:hover {
@@ -239,88 +237,98 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
         .service-card {
             background: white;
+            padding: 2rem;
             border-radius: 10px;
-            overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             transition: all 0.3s;
-        }
-
-        .service-card:hover {
-            transform: scale(1.03);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-        }
-
-        .service-image {
-            height: 280px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
             background-size: cover;
             background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3rem;
-            position: relative;
-            transition: all 0.3s;
         }
 
-        .service-image::before {
+        .service-card::after {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(26, 35, 50, 0.3) 0%, rgba(102, 126, 234, 0.2) 100%);
+            background: rgba(255, 255, 255, 0.92);
+            z-index: 0;
             transition: all 0.3s;
         }
 
-        .service-card:hover .service-image::before {
-            background: linear-gradient(135deg, rgba(26, 35, 50, 0.2) 0%, rgba(102, 126, 234, 0.1) 100%);
+        .service-card:hover::after {
+            background: rgba(255, 255, 255, 0.85);
         }
 
-        .service-image span {
+        .service-card > * {
             position: relative;
             z-index: 1;
         }
 
-        #service1 {
-            background-image: url('images/Services/fab\ items.jpg');
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #ff6b35 0%, #ff8c5a 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s;
         }
 
-        #service2 {
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: #1a2332;
+            margin-bottom: 1rem;
+        }
+
+        /* Individual Service Card Backgrounds */
+        .service-card:nth-child(1) {
+            background-image: url('images/Services/fab%20items.jpg');
+        }
+
+        .service-card:nth-child(2) {
             background-image: url('images/Sales/beam1.jpg');
         }
 
-        #service3 {
+        .service-card:nth-child(3) {
             background-image: url('images/Services/welding1.jpg');
         }
 
-        #service4 {
-            background-image: url('images/Detailing/detailing1.jpg');
+        .service-card:nth-child(4) {
+            background-image: url('images/Detailing/Detailing.jpg');
         }
 
-        #service5 {
-            background-image: url('images/Services/cutting.jpg');
+        .service-card:nth-child(5) {
+            background-image: url('images/projects/Projects2.jpg');
         }
 
-        #service6 {
+        .service-card:nth-child(6) {
             background-image: url('images/Services/welding5.jpg');
-        }
-
-        .service-info {
-            padding: 1.5rem;
-            background: white;
-        }
-
-        .service-info h3 {
-            color: #1a2332;
-            margin-bottom: 0.5rem;
         }
 
         /* Projects Section */
@@ -372,380 +380,4 @@
         }
 
         .project-card:hover .project-image::before {
-            background: linear-gradient(135deg, rgba(26, 35, 50, 0.3) 0%, rgba(102, 126, 234, 0.2) 100%);
-        }
-
-        .project-image span {
-            position: relative;
-            z-index: 1;
-        }
-        
-        #project1 {
-            background-image: url('images/projects/Projects5.jpg');
-        }
-
-        #project2 {
-            background-image: url('images/projects/Projects6.jpg');
-        }
-
-        #project3 {
-            background-image: url('images/projects/Projects4.jpg');
-        }
-
-        #project4 {
-            background-image: url('images/projects/Projects2.jpg');
-        }
-
-        #project5 {
-            background-image: url('images/Detailing/detailing5.png');
-        }
-        
-        #project6 {
-            background-image: url('images/Detailing/detail33.jpg');
-        }
-
-        .project-info {
-            padding: 1.5rem;
-            background: white;
-        }
-
-        .project-info h3 {
-            color: #1a2332;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Contact Section */
-        #contact {
-            background: linear-gradient(135deg, #1a2332 0%, #2c3e50 100%);
-            color: white;
-        }
-
-        #contact .section-title {
-            color: white;
-        }
-
-        #contact .section-title::after {
-            background: linear-gradient(90deg, #fff 0%, rgba(255,255,255,0.7) 100%);
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border: none;
-            border-radius: 5px;
-            font-family: inherit;
-            transition: all 0.3s;
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.3);
-        }
-
-        .contact-form textarea {
-            height: 150px;
-            resize: vertical;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: start;
-            gap: 1rem;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            transition: all 0.3s;
-        }
-
-        .contact-item:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateX(5px);
-        }
-
-        .contact-item-icon {
-            font-size: 1.5rem;
-            color: #ff6b35;
-        }
-
-        /* Footer */
-        footer {
-            background: #1a2332;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 2rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-
-            .hero-content p {
-                font-size: 1.2rem;
-            }
-
-            .about-content,
-            .contact-content {
-                grid-template-columns: 1fr;
-            }
-
-            .about-stats {
-                grid-template-columns: 1fr;
-            }
-
-            .projects-grid,
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="images/Steel%20Matics%20Logo%20Coloured.png" alt="Steelmatics Logo">
-                <span class="logo-text">STEELMATICS</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Steelmatics Continental Infrastructure</h1>
-            <p>Quality Steel Fabrication & Sales Solutions</p>
-            <a href="#contact" class="btn">Get A Quote</a>
-        </div>
-    </section>
-
-    <section id="about">
-        <h2 class="section-title">About Us</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p style="margin-bottom: 1.5rem;">
-                    Steelmatics Continental Infrastructure is a leading provider of Structural steel fabrication, sales and General Construction services. With years of experience in the built environment industry, we deliver quality steel products, expert fabrication, and construction services for construction and infrastructure projects across Nigeria.
-                </p>
-                <p style="margin-bottom: 1.5rem;">
-                    Our commitment to excellence, precision, and customer satisfaction has made us a trusted partner for contractors, builders, and developers. We combine modern technology with skilled craftsmanship to deliver superior results on every project.
-                </p>
-                <p style="margin-bottom: 1.5rem;">
-                    From structural steel to custom metalwork, we provide comprehensive solutions tailored to meet your specific requirements.
-                </p>
-                <p style="margin-bottom: 0.5rem; font-weight: bold; color: #1a2332;">Our Core Values:</p>
-                <p><strong>QUALITY • SAFETY • TRUST • PROFESSIONALISM • CREATIVITY • CUSTOMER CENTERED</strong></p>
-            </div>
-            <div class="about-stats">
-                <div class="stat-box">
-                    <h3>15+</h3>
-                    <p>Personnel Combined Years of Experience</p>
-                </div>
-                <div class="stat-box">
-                    <h3>100%</h3>
-                    <p>Quality Assured</p>
-                </div>
-                <div class="stat-box">
-                    <h3>24/7</h3>
-                    <p>Support Available</p>
-                </div>
-                <div class="stat-box">
-                    <h3>6</h3>
-                    <p>Core Services</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services">
-        <h2 class="section-title">Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-image" id="service1"></div>
-                <div class="service-info">
-                    <h3>Metal Fabrication</h3>
-                    <p>Expert fabrication services for all types of steel structures and components with precision and quality.</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-image" id="service2"></div>
-                <div class="service-info">
-                    <h3>Structural Steel Supply/Sales</h3>
-                    <p>High-quality structural steel supply and sales for construction projects, buildings, and infrastructure development.</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-image" id="service3"></div>
-                <div class="service-info">
-                    <h3>Custom MetalWorks</h3>
-                    <p>Customized metal fabrication solutions designed to meet your specific project requirements and specifications.</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-image" id="service4"></div>
-                <div class="service-info">
-                    <h3>Engineering/Detailing</h3>
-                    <p>Professional engineering and detailed technical drawings for structural steel projects ensuring precision and compliance.</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-image" id="service5"></div>
-                <div class="service-info">
-                    <h3>Civil Works (Concrete Construction Services)</h3>
-                    <p>Comprehensive civil works including concrete construction services for foundations, structures, and infrastructure projects.</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-image" id="service6"></div>
-                <div class="service-info">
-                    <h3>Welding Services</h3>
-                    <p>Professional welding services using modern techniques and equipment for durable and reliable results.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2 class="section-title">Our Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image" id="project1"></div>
-                <div class="project-info">
-                    <h3>Commercial Buildings</h3>
-                    <p>Structural steel fabrication and installation for modern commercial complexes and office buildings.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image" id="project2"></div>
-                <div class="project-info">
-                    <h3>Infrastructure Projects</h3>
-                    <p>Large-scale infrastructure development including bridges, warehouses, and industrial facilities.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image" id="project3"></div>
-                <div class="project-info">
-                    <h3>Industrial Facilities</h3>
-                    <p>Custom steel structures for manufacturing plants, factories, and industrial processing facilities.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image" id="project4"></div>
-                <div class="project-info">
-                    <h3>Residential Projects</h3>
-                    <p>Residential steel structures including gates, railings, and structural support systems.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image" id="project5"></div>
-                <div class="project-info">
-                    <h3>Structural Detailing and Modelling</h3>
-                    <p>Advanced 3D structural modeling and detailed shop drawings for precise fabrication and installation.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image" id="project6"></div>
-                <div class="project-info">
-                    <h3>Erection Services</h3>
-                    <p>Professional steel structure erection and installation services ensuring safe and precise assembly on-site.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2 class="section-title">Contact Us</h2>
-        <div class="contact-content">
-            <form class="contact-form" onsubmit="return handleSubmit(event)">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <input type="tel" placeholder="Phone Number" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-item-icon">📧</div>
-                    <div>
-                        <h3>Email</h3>
-                        <p>info@steelmaticscontinentalinfrastructure.com</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-item-icon">📞</div>
-                    <div>
-                        <h3>Phone</h3>
-                        <p>+234 802 274 3564</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-item-icon">📍</div>
-                    <div>
-                        <h3>Lagos Office</h3>
-                        <p>15 Towolawi Ave, off Ogungbesan Street,<br>Coker off Oshodi Apapa Express,<br>Lagos, Nigeria</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-item-icon">📍</div>
-                    <div>
-                        <h3>Ibadan Office</h3>
-                        <p>8 Fagbo Close, off Olubadan Avenue,<br>Oluyole Estate,<br>Ibadan, Oyo State</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Steelmatics Continental Infrastructure. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        // Form submission
-        function handleSubmit(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            e.target.reset();
-            return false;
-        }
-    </script>
-</body>
-</html>
+            background:
