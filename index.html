@@ -348,6 +348,104 @@
             margin-bottom: 0.5rem;
         }
 
+        /* Blog Section */
+        #blog {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+        }
+
+        .blog-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            background-color: #e0e0e0;
+            position: relative;
+        }
+
+        .blog-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(26, 35, 50, 0.4) 0%, rgba(102, 126, 234, 0.2) 100%);
+            transition: all 0.3s;
+        }
+
+        .blog-card:hover .blog-image::before {
+            background: linear-gradient(135deg, rgba(26, 35, 50, 0.2) 0%, rgba(102, 126, 234, 0.1) 100%);
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .blog-date {
+            color: #666;
+        }
+
+        .blog-category {
+            background: #ff6b35;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .blog-content h3 {
+            color: #1a2332;
+            margin-bottom: 0.75rem;
+            font-size: 1.3rem;
+            line-height: 1.4;
+        }
+
+        .blog-content p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .blog-read-more {
+            color: #ff6b35;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .blog-read-more:hover {
+            color: #e55a2b;
+            transform: translateX(5px);
+        }
+
         /* Lazy load placeholder */
         .lazy-bg {
             background-color: #e0e0e0;
@@ -473,6 +571,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -659,6 +758,50 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="blog">
+        <h2 class="section-title">Latest Updates & Insights</h2>
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="blog-image lazy-bg" data-bg="images/projects/Projects1.jpg"></div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-date">📅 October 15, 2025</span>
+                        <span class="blog-category">Industry News</span>
+                    </div>
+                    <h3>The Future of Steel Fabrication in Nigeria</h3>
+                    <p>Exploring emerging trends and technologies transforming the steel fabrication industry across Nigeria and West Africa...</p>
+                    <a href="#" class="blog-read-more">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image lazy-bg" data-bg="images/Services/welding1.jpg"></div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-date">📅 October 8, 2025</span>
+                        <span class="blog-category">Best Practices</span>
+                    </div>
+                    <h3>Quality Control in Structural Steel Projects</h3>
+                    <p>Understanding the importance of quality assurance and control measures in delivering superior steel structures...</p>
+                    <a href="#" class="blog-read-more">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-image lazy-bg" data-bg="images/Detailing/detailing1.jpg"></div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-date">📅 September 30, 2025</span>
+                        <span class="blog-category">Technology</span>
+                    </div>
+                    <h3>Advanced 3D Modeling for Steel Detailing</h3>
+                    <p>How modern 3D modeling software and BIM technology is revolutionizing structural steel detailing and fabrication...</p>
+                    <a href="#" class="blog-read-more">Read More →</a>
+                </div>
+            </article>
         </div>
     </section>
 
