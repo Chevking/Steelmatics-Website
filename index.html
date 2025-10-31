@@ -260,9 +260,13 @@
             height: 280px;
             background-size: cover;
             background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
             position: relative;
             transition: all 0.3s;
-            background-color: #e0e0e0;
         }
 
         .service-image::before {
@@ -278,6 +282,35 @@
 
         .service-card:hover .service-image::before {
             background: linear-gradient(135deg, rgba(26, 35, 50, 0.2) 0%, rgba(102, 126, 234, 0.1) 100%);
+        }
+
+        .service-image span {
+            position: relative;
+            z-index: 1;
+        }
+
+        #service1 {
+            background-image: url('images/Services/fab\ items.jpg');
+        }
+
+        #service2 {
+            background-image: url('images/Sales/beam1.jpg');
+        }
+
+        #service3 {
+            background-image: url('images/Services/welding1.jpg');
+        }
+
+        #service4 {
+            background-image: url('images/Detailing/detailing1.jpg');
+        }
+
+        #service5 {
+            background-image: url('images/Services/cutting.jpg');
+        }
+
+        #service6 {
+            background-image: url('images/Services/welding5.jpg');
         }
 
         .service-info {
@@ -318,9 +351,13 @@
             height: 280px;
             background-size: cover;
             background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
             position: relative;
             transition: all 0.3s;
-            background-color: #e0e0e0;
         }
 
         .project-image::before {
@@ -338,6 +375,35 @@
             background: linear-gradient(135deg, rgba(26, 35, 50, 0.3) 0%, rgba(102, 126, 234, 0.2) 100%);
         }
 
+        .project-image span {
+            position: relative;
+            z-index: 1;
+        }
+        
+        #project1 {
+            background-image: url('images/projects/Projects5.jpg');
+        }
+
+        #project2 {
+            background-image: url('images/projects/Projects6.jpg');
+        }
+
+        #project3 {
+            background-image: url('images/projects/Projects4.jpg');
+        }
+
+        #project4 {
+            background-image: url('images/projects/Projects2.jpg');
+        }
+
+        #project5 {
+            background-image: url('images/Detailing/detailing5.png');
+        }
+        
+        #project6 {
+            background-image: url('images/Detailing/detail33.jpg');
+        }
+
         .project-info {
             padding: 1.5rem;
             background: white;
@@ -346,11 +412,6 @@
         .project-info h3 {
             color: #1a2332;
             margin-bottom: 0.5rem;
-        }
-
-        /* Lazy load placeholder */
-        .lazy-bg {
-            background-color: #e0e0e0;
         }
 
         /* Contact Section */
@@ -465,7 +526,7 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="images/Steel%20Matics%20Logo%20Coloured.png" alt="Steelmatics Logo" loading="lazy">
+                <img src="images/Steel%20Matics%20Logo%20Coloured.png" alt="Steelmatics Logo">
                 <span class="logo-text">STEELMATICS</span>
             </div>
             <ul class="nav-links">
@@ -527,42 +588,42 @@
         <h2 class="section-title">Our Services</h2>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-image lazy-bg" data-bg="images/Services/fab items.jpg"></div>
+                <div class="service-image" id="service1"></div>
                 <div class="service-info">
                     <h3>Metal Fabrication</h3>
                     <p>Expert fabrication services for all types of steel structures and components with precision and quality.</p>
                 </div>
             </div>
             <div class="service-card">
-                <div class="service-image lazy-bg" data-bg="images/Sales/beam1.jpg"></div>
+                <div class="service-image" id="service2"></div>
                 <div class="service-info">
                     <h3>Structural Steel Supply/Sales</h3>
                     <p>High-quality structural steel supply and sales for construction projects, buildings, and infrastructure development.</p>
                 </div>
             </div>
             <div class="service-card">
-                <div class="service-image lazy-bg" data-bg="images/Services/welding1.jpg"></div>
+                <div class="service-image" id="service3"></div>
                 <div class="service-info">
                     <h3>Custom MetalWorks</h3>
                     <p>Customized metal fabrication solutions designed to meet your specific project requirements and specifications.</p>
                 </div>
             </div>
             <div class="service-card">
-                <div class="service-image lazy-bg" data-bg="images/Detailing/detailing1.jpg"></div>
+                <div class="service-image" id="service4"></div>
                 <div class="service-info">
                     <h3>Engineering/Detailing</h3>
                     <p>Professional engineering and detailed technical drawings for structural steel projects ensuring precision and compliance.</p>
                 </div>
             </div>
             <div class="service-card">
-                <div class="service-image lazy-bg" data-bg="images/Detailing/detailing5.png"></div>
+                <div class="service-image" id="service5"></div>
                 <div class="service-info">
                     <h3>Civil Works (Concrete Construction Services)</h3>
                     <p>Comprehensive civil works including concrete construction services for foundations, structures, and infrastructure projects.</p>
                 </div>
             </div>
             <div class="service-card">
-                <div class="service-image lazy-bg" data-bg="images/Services/welding5.jpg"></div>
+                <div class="service-image" id="service6"></div>
                 <div class="service-info">
                     <h3>Welding Services</h3>
                     <p>Professional welding services using modern techniques and equipment for durable and reliable results.</p>
@@ -575,42 +636,42 @@
         <h2 class="section-title">Our Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <div class="project-image lazy-bg" data-bg="images/projects/Projects5.jpg"></div>
+                <div class="project-image" id="project1"></div>
                 <div class="project-info">
                     <h3>Commercial Buildings</h3>
                     <p>Structural steel fabrication and installation for modern commercial complexes and office buildings.</p>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image lazy-bg" data-bg="images/projects/Projects6.jpg"></div>
+                <div class="project-image" id="project2"></div>
                 <div class="project-info">
                     <h3>Infrastructure Projects</h3>
                     <p>Large-scale infrastructure development including bridges, warehouses, and industrial facilities.</p>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image lazy-bg" data-bg="images/projects/Projects4.jpg"></div>
+                <div class="project-image" id="project3"></div>
                 <div class="project-info">
                     <h3>Industrial Facilities</h3>
                     <p>Custom steel structures for manufacturing plants, factories, and industrial processing facilities.</p>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image lazy-bg" data-bg="images/projects/Projects2.jpg"></div>
+                <div class="project-image" id="project4"></div>
                 <div class="project-info">
                     <h3>Residential Projects</h3>
                     <p>Residential steel structures including gates, railings, and structural support systems.</p>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image lazy-bg" data-bg="images/Detailing/detail33.jpg"></div>
+                <div class="project-image" id="project5"></div>
                 <div class="project-info">
                     <h3>Structural Detailing and Modelling</h3>
                     <p>Advanced 3D structural modeling and detailed shop drawings for precise fabrication and installation.</p>
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-image lazy-bg" data-bg="images/Detailing/detailing5.png"></div>
+                <div class="project-image" id="project6"></div>
                 <div class="project-info">
                     <h3>Erection Services</h3>
                     <p>Professional steel structure erection and installation services ensuring safe and precise assembly on-site.</p>
@@ -667,34 +728,6 @@
     </footer>
 
     <script>
-        // Lazy loading for background images
-        function lazyLoadBackgrounds() {
-            const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
-            
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const element = entry.target;
-                        const imageUrl = element.getAttribute('data-bg');
-                        element.style.backgroundImage = `url('${imageUrl}')`;
-                        element.classList.remove('lazy-bg');
-                        observer.unobserve(element);
-                    }
-                });
-            }, {
-                rootMargin: '50px' // Start loading 50px before element comes into view
-            });
-
-            lazyBackgrounds.forEach(bg => imageObserver.observe(bg));
-        }
-
-        // Initialize lazy loading when DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', lazyLoadBackgrounds);
-        } else {
-            lazyLoadBackgrounds();
-        }
-
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
